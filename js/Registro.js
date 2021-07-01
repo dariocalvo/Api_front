@@ -131,7 +131,8 @@
 	}
 
 	function Enviar(){
-		var servidor = "http://localhost:666/NuevoUsuario";
+		//var servidor = "http://localhost:666/NuevoUsuario";
+		var servidor = "https://api-back-calvo.herokuapp.com/app/NuevoUsuario";
 		var datos= new FormData();
 		datos.append("nombre", Control("nombre").value);
 		datos.append("email", Control("email").value);
@@ -143,8 +144,8 @@
 	}
 
 	function buscarUsuario(){
-		
-		var servidor = "http://localhost:666/BuscarUsuario";
+		//var servidor = "http://localhost:666/BuscarUsuario";
+		var servidor = "https://api-back-calvo.herokuapp.com/app/BuscarUsuario";
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		var xmlhttp = new XMLHttpRequest();

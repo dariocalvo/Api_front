@@ -41,7 +41,8 @@
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		datos.append("pass", Control("contraseña").value);
-		var servidor = "http://localhost:666/BuscarUsuario";
+		//var servidor = "http://localhost:666/BuscarUsuario";
+		var servidor = "https://api-back-calvo.herokuapp.com/app/BuscarUsuario";
 		EnviarPost(servidor, datos,  Respuesta);	
 	}
 

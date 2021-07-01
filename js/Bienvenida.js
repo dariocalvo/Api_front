@@ -14,7 +14,8 @@ function escucharEventos(){
 }
 
 function ponerimagen(imagen){
-	var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
+	//var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
+	var servidor = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
 	if(imagen !== "null" & imagen !== "" ){
 		Control('img_previa').src = rutaimagen + imagen;
 	}else{
@@ -38,7 +39,8 @@ function baja(){
 		var datos= new FormData();
 		datos.append("usuario", sessionStorage.getItem('usuario'));
 		datos.append("imagen", sessionStorage.getItem('imagen'));
-		var servidor = "http://localhost:666/BajaUsuario";
+		//var servidor = "http://localhost:666/BajaUsuario";
+		var servidor = "https://api-back-calvo.herokuapp.com/app/BajaUsuario";
 		EnviarPost(servidor, datos,  Respuesta);
 		cerrar();
 	}
