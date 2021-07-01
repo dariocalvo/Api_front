@@ -1,8 +1,8 @@
 	addEventListener('load',Alcargar)
-	var servidor =  'https://api-back-calvo.herokuapp.com/Api-back-calvo';
+	var servidor =  'https://api-back-calvo.herokuapp.com';
 	//var servidor = "http://localhost:666";
-	//var rutaImagen = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
-	var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
+	var rutaImagen = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
+	//var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
     
 	
 		
