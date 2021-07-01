@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<Head>
+		<Title> Publicaciones </title>
+		<meta name="Publicaciones" content="Trabajo práctico Nro 1, ejercicio 1">
+		<meta name="Autor" content="Dario Calvo">
+		<meta data="Fecha de creación" content="25/05/2021">
+		<meta data="Idioma" content="Español">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- scripts -->
+		<script src="js/Publicaciones.js"></script>
+		<script src="js/funciones_generales.js"></script>
+		<!-- Estilos -->
+		<link rel="stylesheet" href="css/Publicaciones.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</head>
+    <body>
+		<header>
+			<div class="header">
+				<table>
+					<td style ="width: 50px"><img class="logo" src="img/logo.png" alt="Logo"></td>
+					<td id="sitio" style ="width: 500px"><h1>Sitio.com</h1></td>
+				</table>
+				<!--Menu Usuario-->
+				<div class="optionsBar">
+					<p id="fecha"></p>
+					<span></span>
+					<span id="usuario"></span>
+					<ul>	
+						<li><img class="photouser" id="photouser" alt="Usuario" title="Mi cuenta">
+							<ul>
+							<!--<li><a id="editar" href= "">Editar mis datos</a></li>
+								<li><a id="cambiopass" href= "">Cambira contraseña</a></li> -->
+								<li><a id="baja" href= "">Borrar mi cuenta</a></li>
+								<li><a id="cerrar" href= "">Cerrar Sesion</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class= "nav">
+        <nav id="Barra_nav">
+            <ul>
+            <!--<li><a href="">Inicio</a></li>-->
+                <li class="principal">
+                    <a href="#">Publicaciones</a>
+                    <ul id= "rubros">
+					</ul>
+                </li>
+            </ul>
+        </nav>
+		</div>
+
+		<article id= "contenido">
+		<table >
+			<tbody id ="publicacion">	
+			</tbody>
+		</table>			
+			
+		</article>	
+			<div id = "spinner" class ="spinner-border text-success" ></div> 	
+		
+		<footer>
+			<div class="footer">
+				<div class="texto_pie">
+					<p>Copyrigth 2021 - Sitio diseñado y creado por Dario Antonio Calvo para Instituto Tecnológico Beltran -  TECAS EDI3 3º 1º - </p>
+				</div>
+			</div>
+		</footer>
+
+	</body>	
+</html>
