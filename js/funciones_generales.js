@@ -1,4 +1,10 @@
-	addEventListener('load',Alcargar,false);
+	addEventListener('load',Alcargar)
+	//var servidor =  'https://api-back-calvo.herokuapp.com';
+	var servidor = "http://localhost:666";
+	//var rutaImagen = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
+	var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
+    
+	
 		
     //Moverse por los elementos al pulsar Enter (generica y reutilizable si se indexan los elementos)
     document.addEventListener('keypress', function(pulsar) {

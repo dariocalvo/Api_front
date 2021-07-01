@@ -1,5 +1,5 @@
 	  	
-	function Alcargar(){//Hacer foco al cagar la pagina en el primer campo a rellenar
+	function Alcargar(){
 		Control('spinner').style.display= "none";
 		Control('usuario').focus();
 		escucharEventos();
@@ -41,9 +41,7 @@
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		datos.append("pass", Control("contraseña").value);
-		//var servidor = "http://localhost:666/BuscarUsuario";
-		var servidor = "https://api-back-calvo.herokuapp.com/app/BuscarUsuario";
-		EnviarPost(servidor, datos,  Respuesta);	
+		EnviarPost(servidor + '/BuscarUsuario', datos,  Respuesta);	
 	}
 
 	function Respuesta(mensaje){

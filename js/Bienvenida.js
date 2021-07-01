@@ -14,8 +14,6 @@ function escucharEventos(){
 }
 
 function ponerimagen(imagen){
-	//var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
-	var servidor = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
 	if(imagen !== "null" & imagen !== "" ){
 		Control('img_previa').src = rutaimagen + imagen;
 	}else{

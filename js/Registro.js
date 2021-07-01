@@ -1,5 +1,5 @@
 	var usuarioDisponible= true;	
-	function Alcargar(){//Hacer foco al cagar la pagina en el primer campo a rellenar
+	function Alcargar(){
 		Control('spinner').style.display= "none";
 		Control('nombre').focus();
 		Control('default').style.display = 'none';
@@ -131,25 +131,22 @@
 	}
 
 	function Enviar(){
-		//var servidor = "http://localhost:666/NuevoUsuario";
-		var servidor = "https://api-back-calvo.herokuapp.com/app/NuevoUsuario";
 		var datos= new FormData();
 		datos.append("nombre", Control("nombre").value);
 		datos.append("email", Control("email").value);
 		datos.append("usuario", Control("usuario").value);
 		datos.append("pass", Control("contraseña").value);
 		datos.append("avatar", Control("avatar").files[0]);
-		EnviarPost(servidor, datos,  Respuesta);
+		EnviarPost(servidor + '/NuevoUsuario' , datos,  Respuesta);
 		setTimeout(function(){window.location = 'Login.html';}, 1000);
 	}
 
 	function buscarUsuario(){
-		//var servidor = "http://localhost:666/BuscarUsuario";
-		var servidor = "https://api-back-calvo.herokuapp.com/app/BuscarUsuario";
+		
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", servidor, true);
+		xmlhttp.open("POST", servidor + '/BuscarUsuario' , true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == XMLHttpRequest.DONE){
 				if(xmlhttp.status == 200){
