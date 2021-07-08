@@ -36,7 +36,7 @@
 			Enviar();
 		}	
 	}
-
+	
 	function Enviar(){
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
