@@ -25,7 +25,7 @@ function ponerimagenUsuario(imagen){
 }
 
 function cargarRubros(){
-    EnviarPedidoDatos(servidor + '/PedirRubros', PonerRubros);
+    EnviarPedidoDatos(servidor + '/Rubro/Listar', PonerRubros);
 }
 
 function PonerRubros(Respuesta){
@@ -40,7 +40,7 @@ function PonerRubros(Respuesta){
 function cargarPublicaciones(id){
     var datos= new FormData();
     datos.append("id_rubro", id);
-    EnviarPost(servidor + '/FiltrarPublicaciones', datos, mostrarPublicaciones);
+    EnviarPost(servidor + '/Publicacion/Filtrar', datos, mostrarPublicaciones);
 
 }
 
@@ -67,8 +67,8 @@ function baja(){
 		var datos= new FormData();
 		datos.append("usuario", sessionStorage.getItem('usuario'));
 		datos.append("imagen", sessionStorage.getItem('imagen'));
-		EnviarPost(servidor + '/BajaUsuario', datos,  Respuesta);
-		cerrar();
+		EnviarPost(servidor + '/Usuario/Baja', datos,  Respuesta);
+		salir();
 	}
 }	
 

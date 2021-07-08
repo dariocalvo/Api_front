@@ -41,7 +41,7 @@
 				}
 			}
 		}
-		//xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
+		xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
 		xmlhttp.send(datos);
 	}
 

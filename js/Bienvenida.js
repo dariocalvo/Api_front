@@ -37,9 +37,7 @@ function baja(){
 		var datos= new FormData();
 		datos.append("usuario", sessionStorage.getItem('usuario'));
 		datos.append("imagen", sessionStorage.getItem('imagen'));
-		//var servidor = "http://localhost:666/BajaUsuario";
-		var servidor = "https://api-back-calvo.herokuapp.com/app/BajaUsuario";
-		EnviarPost(servidor, datos,  Respuesta);
+		EnviarPost(servidor + '/Usuario/Baja', datos,  Respuesta);	
 		cerrar();
 	}
 }	

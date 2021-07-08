@@ -41,7 +41,7 @@
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		datos.append("pass", Control("contraseña").value);
-		EnviarPost(servidor + '/BuscarUsuario', datos,  Respuesta);	
+		EnviarPost(servidor + '/Usuario/Buscar', datos,  Respuesta);	
 	}
 
 	function Respuesta(mensaje){

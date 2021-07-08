@@ -137,7 +137,7 @@
 		datos.append("usuario", Control("usuario").value);
 		datos.append("pass", Control("contraseña").value);
 		datos.append("avatar", Control("avatar").files[0]);
-		EnviarPost(servidor + '/NuevoUsuario' , datos,  Respuesta);
+		EnviarPost(servidor + '/Usuario/Nuevo' , datos,  Respuesta);
 		setTimeout(function(){window.location = 'Login.html';}, 1000);
 	}
 
@@ -146,7 +146,7 @@
 		var datos= new FormData();
 		datos.append("usuario", Control("usuario").value);
 		var xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", servidor + '/BuscarUsuario' , true);
+		xmlhttp.open("POST", servidor + '/Usuario/Buscar' , true);
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState == XMLHttpRequest.DONE){
 				if(xmlhttp.status == 200){
