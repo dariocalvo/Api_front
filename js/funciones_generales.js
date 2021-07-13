@@ -4,7 +4,10 @@
 	var rutaImagen = "https://api-back-calvo.herokuapp.com/app/uploads/img/usuarios/";
 	//var rutaimagen = "http://localhost:666/uploads/img/usuarios/";
     
-	
+	//No navegar hacia atrás
+	if (history.forward(-1)) {
+		location.replace(history.forward(1));
+	}
 		
     //Moverse por los elementos al pulsar Enter (generica y reutilizable si se indexan los elementos)
     document.addEventListener('keypress', function(pulsar) {
